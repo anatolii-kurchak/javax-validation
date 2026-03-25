@@ -11,7 +11,7 @@ import javax.validation.Payload;
 @Target(ElementType.FIELD)
 @Constraint(validatedBy = ValidNameValidator.class)
 public @interface ValidName {
-    String message() default "${validatedValue} is invalid name!!";
+    String message() default "${validatedValue} is invalid name";
 
     Class<?>[] groups() default {};
 

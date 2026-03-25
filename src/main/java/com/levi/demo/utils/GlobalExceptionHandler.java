@@ -42,7 +42,10 @@ public class GlobalExceptionHandler {
 
     private List<Error> createErrors(Collection<ConstraintViolation<?>> constraintViolations) {
         return constraintViolations.stream()
-            .map(violation -> new Error().message(violation.getMessage()).date(OffsetDateTime.now()))
+            .map(violation -> new Error()
+                .message(violation.getMessage())
+                .field(violation.getPropertyPath().toString())
+                .date(OffsetDateTime.now()))
             .collect(Collectors.toList());
     }
 
