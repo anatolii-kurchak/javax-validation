@@ -12,7 +12,7 @@ import javax.validation.Payload;
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Constraint(validatedBy = ValidMusicianTypeValidator.class)
 public @interface ValidMusicianType {
-    String message() default "${validatedValue} is invalid Musician type!!!";
+    String message() default "${validatedValue} is invalid musician type";
 
     Class<?>[] groups() default {};
 

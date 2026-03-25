@@ -29,7 +29,7 @@ paths:
         description: Musician's type
       operationId: getMusicians
       responses:
-        "202":
+        "200":
           description: Success
           content:
             application/json:
@@ -121,6 +121,8 @@ components:
       type: object
       properties:
         message:
+          type: string
+        field:
           type: string
         date:
           type: string

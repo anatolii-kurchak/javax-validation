@@ -20,6 +20,6 @@ public class NickNameAndEmailStartWithSameLetterValidator implements ConstraintV
          return false;
       }
 
-      return nickName.charAt(0) == email.charAt(0);
+      return Character.toLowerCase(nickName.charAt(0)) == Character.toLowerCase(email.charAt(0));
    }
 }
